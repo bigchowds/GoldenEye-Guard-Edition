@@ -8,7 +8,7 @@ This first public beta supports **Runway only**. Streets, Dam and Facility are f
 
 ## Download and play
 
-Download the `.xdelta` patch from this repository's **Releases**. Apply it directly to your own clean NTSC-U `.z64` using [PATCHING.md](PATCHING.md). This is an all-in-one patch built on GoldenEye 007 Plus; an earlier third-person or guard-mode patch is not needed.
+Download the `.xdelta` patch from this repository's **Releases**. Apply it directly to your own clean NTSC-U `.z64` using [PATCHING.md](docs/PATCHING.md). This is an all-in-one patch built on GoldenEye 007 Plus; an earlier third-person or guard-mode patch is not needed.
 
 Use **8 MB RAM** and **16 Kbit EEPROM**, restart the emulator, and start a fresh mission. Older save states contain older game code/state and must not be loaded for this version.
 
@@ -38,20 +38,20 @@ The tank is optional in the original mission. This mod deliberately sends AI Bon
 
 This is a playable beta, with room to improve combat balance, movement and camera behavior. Tank boarding/leaving are timed state transitions rather than newly authored climbing animations. The cannon retains range and elevation limits; the held gun covers close defence when there is line of sight. Original first-person gun/arm assets remain. There is no custom aircraft takeoff scene.
 
-See [VALIDATION.md](VALIDATION.md) for the specific native emulator checks and their limits. To report a problem, include the build, difficulty, emulator/version, graphics plugin, RAM/save settings, reproduction steps, and ideally a short clip. Use [BUG_REPORT.md](BUG_REPORT.md).
+See [VALIDATION.md](docs/VALIDATION.md) for the specific native emulator checks and their limits. To report a problem, include the build, difficulty, emulator/version, graphics plugin, RAM/save settings, reproduction steps, and ideally a short clip. Use [BUG_REPORT.md](docs/BUG_REPORT.md).
 
 ## Source and rebuilding
 
-- `guardmode.c` and `guardmode.h`: readable core implementation.
-- `guard-mode-source.patch`: complete binary-capable source changes, including hooks, setup/text, portrait asset/encoder and build integration.
-- [REBUILD.md](REBUILD.md): pinned upstream, dependencies and build commands.
-- [BUILD_INFO.json](BUILD_INFO.json) and `SHA256SUMS.txt`: release hashes and validation metadata.
-- [ROADMAP.md](ROADMAP.md): future map concepts only.
+- `source/guardmode.c` and `source/guardmode.h`: readable core implementation.
+- `source/guard-mode-source.patch`: complete binary-capable source changes, including hooks, setup/text, portrait asset/encoder and build integration.
+- [REBUILD.md](docs/REBUILD.md): pinned upstream, dependencies and build commands.
+- [BUILD_INFO.json](docs/BUILD_INFO.json) and `docs/SHA256SUMS.txt`: release hashes and validation metadata.
+- [ROADMAP.md](docs/ROADMAP.md): future map concepts only.
 
-The patch/source project contains no game ROM or emulator save. `guardmode.c` alone is not a standalone program: apply the complete source patch to the pinned upstream to rebuild.
+The patch/source project contains no game ROM or emulator save. `source/guardmode.c` alone is not a standalone program: apply the complete source patch to the pinned upstream to rebuild.
 
 ## Credits and notices
 
 Concept, direction, playtesting and project development: **Big Chowds**. Built on [GoldenEye 007 Plus](https://github.com/Joshua-1248/GoldenEye-007-Plus), pinned to `d9fd72c0be65ea15e542962bae8eb89a97b65868`, and the GoldenEye decompilation. Rare created the original game.
 
-Preserve [CREDITS.txt](CREDITS.txt), [LICENSES_AND_NOTICES.txt](LICENSES_AND_NOTICES.txt) and [REFERENCES.txt](REFERENCES.txt). This project does not assign a new blanket licence to upstream game-derived material.
+Preserve [CREDITS.txt](docs/CREDITS.txt), [LICENSES_AND_NOTICES.txt](LICENSES_AND_NOTICES.txt) and [REFERENCES.txt](docs/REFERENCES.txt). This project does not assign a new blanket licence to upstream game-derived material.

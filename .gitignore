@@ -1,24 +1,28 @@
+# Retail ROMs, output ROMs and emulator state
 *.z64
 *.n64
 *.v64
 *.rom
+*.eep
+*.sra
+*.fla
 *.sav
 *.srm
-*.state
+*.mpk
 *.pj
 *.pj.zip
-*.bak
-*.tmp
-
+*.st[0-9]*
+*.state
+*.state[0-9]*
+*.m64
+baserom*
+build/
+extracted/
 __pycache__/
 *.pyc
 
-.DS_Store
-Thumbs.db
-desktop.ini
-
-build/
-dist/
-out/
-temp/
-tmp/
+# Gameplay captures and local tools
+*.mkv
+*.mp4
+*.avi
+.toolchain/
